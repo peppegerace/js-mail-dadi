@@ -38,13 +38,18 @@ console.log(listaMail)
 
 const inviaMail = document.getElementById('invia')
 
+// aggiungo un ascoltatore al click
 inviaMail.addEventListener('click', function(){
+  // raccolgo il dato dell'utente
   const mailInserita = document.getElementById('email').value;
   console.log(mailInserita)
 
+  // verifico che il dato faccia parte dell'array
   if (listaMail.includes(mailInserita)) {
+    // stampo in pagina il risultato della verifica
     document.querySelector('.output').innerHTML = 'Puoi continuare la navigazione su questa pagina'
   } else {
+    // stampo in pagina il risultato della verifica
     document.querySelector('.output').innerHTML = 'Accesso negato'
   }
 })
